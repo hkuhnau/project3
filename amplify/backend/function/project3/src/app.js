@@ -32,7 +32,7 @@ app.use(function(req, res, next) {
 // Import axios
 const axios = require('axios')
 
-app.get('/coins', function(req, res) {
+app.get('/items', function(req, res) {
   // Define base url
   let apiUrl = `https://api.coinlore.com/api/tickers?start=0&limit=10`
 
