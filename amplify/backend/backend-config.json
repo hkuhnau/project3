@@ -1,1 +1,27 @@
-{}
+{
+  "function": {
+    "project3": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_project3_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "project3"
+        }
+      ]
+    },
+    "AMPLIFY_function_project3_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "project3"
+        }
+      ]
+    }
+  }
+}
