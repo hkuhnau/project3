@@ -10,10 +10,19 @@ function App() {
   // Create coins variable and set to empty array
   const [items, updateCoins] = useState([])
 
+  //Create additional state to hold user input for limit and start props
+  const [input, updateInput] = useState({ limit: 5, start: 0});
+
+  //Crate a new function to allow users to update the input values
+  function updateInputValues(type, value) {
+    updateInput({...input, [type]: value});
+  }
+
   // Define function to all API
-  async function fetchCoins() {
-    const data = await API.get('project3', '/items')
-    updateCoins(data.items)
+  const fetchCoins = async() => {
+    const {limit, start} = input;
+    const data = await API.get('project3', `/items?limit=${limit}&start=${start}`);
+    updateCoins(data.items);
   }
 
   // Call fetchCoins function when component loads
