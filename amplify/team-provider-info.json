@@ -15,7 +15,7 @@
       "function": {
         "project3": {
           "deploymentBucketName": "amplify-project3-dev-101558-deployment",
-          "s3Key": "amplify-builds/project3-54625235486550764554-build.zip"
+          "s3Key": "amplify-builds/project3-6e6164365438745a502f-build.zip"
         }
       },
       "api": {

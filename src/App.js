@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react'
 import { API } from 'aws-amplify'
 
 import './App.css';
+import BornOnDay from './BornOnDay';
 
 function App() {
   // Create coins variable and set to empty array
@@ -36,6 +37,7 @@ function App() {
   }, [])
 
   return (
+    <>
     <div className="App">
       <input
         onChange={e => updateInputValues('limit', e.target.value)}
@@ -56,6 +58,8 @@ function App() {
         ))
       }
     </div>
+    <BornOnDay/>
+    </>
   );
 }
 

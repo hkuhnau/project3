@@ -51,6 +51,17 @@ app.get('/items', function(req, res) {
     .catch(err => res.json({ error: err }))
 })
 
+  //different path and api
+app.get('/born', function(req, res) {
+  const born = `https://api.github.com/users/hkuhnau`;
+  // Call API and return response
+  axios.get(born)
+    .then(response => {
+      res.json({  born: response.data })
+    })
+    .catch(err => res.json({ error: err }))
+})
+
 app.get('/item', function(req, res) {
   // Add your code here
   res.json({success: 'get call succeed!', url: req.url});
